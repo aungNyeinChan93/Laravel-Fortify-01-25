@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <main class="w-full h-screen flex flex-col justify-center">
+    <main class="w-full h-screen flex flex-col justify-center items-center">
         {{ $slot }}
     </main>
 </body>

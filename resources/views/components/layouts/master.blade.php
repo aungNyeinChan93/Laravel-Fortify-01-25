@@ -24,7 +24,7 @@
                             </span>
                         </label>
                     </div>
-                    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                         <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
                         <span
                             class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -65,6 +65,16 @@
                                 class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
                         </li>
                     </ul>
+
+                </div>
+                <div class="flex space-x-4 items-center">
+                    <span class="p-2 hover:border-1 hover:border-green-400 rounded-lg">{{ auth()->user()->name }}</span>
+                    @auth
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="px-4 py-2 rounded-lg bg-gray-400">Logout</button>
+                        </form>
+                    @endauth
                 </div>
             </div>
         </nav>
